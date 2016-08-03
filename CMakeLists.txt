@@ -62,11 +62,12 @@ else ()
 		FIND_LIBRARY(CORESERVICES_LIBRARY CoreServices )
 		FIND_LIBRARY(CORETOOLBOX_LIBRARY AudioToolbox)
 		set(LIBS ${LIBS} ${COREAUDIO_LIBRARY} ${CORESERVICES_LIBRARY} ${COREFOUNDATION_LIBRARY} ${CORETOOLBOX_LIBRARY})
+	
+		SET(OBJECTS ${OBJECTS}  "$<TARGET_OBJECTS:coreaudio>")
 	ENDIF (APPLE)
 
 	SET(OBJECTS 	${OBJECTS}
                     "$<TARGET_OBJECTS:common>"
-                    "$<TARGET_OBJECTS:coreaudio>"
                     "$<TARGET_OBJECTS:unix>"
 		)
     add_library(${PROJECT_NAME} SHARED ${OBJECTS})

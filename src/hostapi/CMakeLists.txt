@@ -23,6 +23,8 @@ else ()
 		add_subdirectory(oss)
 	endif()
 
-	add_subdirectory(coreaudio)
+	if(APPLE)
+		add_subdirectory(coreaudio)
+	endif()
 endif ()
 
