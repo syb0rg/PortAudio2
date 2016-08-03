@@ -10,10 +10,19 @@ if	(WIN32)
 	#add_subdirectory(wdmks)
 	add_subdirectory(wmme)
 else ()
-	add_subdirectory(alsa)
-	add_subdirectory(asihpi)
+	if (ALSA_FOUND)
+		add_subdirectory(alsa)
+		add_subdirectory(asihpi)
+	endif ()
+
+	if (JACK_FOUND)
+		add_subdirectory(jack)
+	endif ()
+	
+	if(OSS_FOUND)
+		add_subdirectory(oss)
+	endif()
+
 	add_subdirectory(coreaudio)
-	add_subdirectory(jack)
-	add_subdirectory(oss)
 endif ()
 
