@@ -5,3 +5,4 @@ SET(SOURCES	pa_unix_hostapis.c
 	)
 
 add_library(unix OBJECT ${SOURCES})
+set_property(TARGET unix PROPERTY POSITION_INDEPENDENT_CODE TRUE)

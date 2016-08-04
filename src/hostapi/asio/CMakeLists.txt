@@ -6,3 +6,4 @@ SET(SOURCES	iasiothiscallresolver.cpp
 	)
 	
 add_library(asio OBJECT ${SOURCES})
+set_property(TARGET asio PROPERTY POSITION_INDEPENDENT_CODE TRUE)

@@ -5,3 +5,4 @@ include_directories(mingw-include)
 set(SOURCES	pa_win_wasapi.c)
 
 add_library(wasapi OBJECT ${SOURCES})
+set_property(TARGET wasapi PROPERTY POSITION_INDEPENDENT_CODE TRUE)

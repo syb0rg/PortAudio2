@@ -6,3 +6,4 @@ SET(SOURCES	pa_mac_core.c
 	)
 	
 add_library(coreaudio OBJECT ${SOURCES})
+set_property(TARGET coreaudio PROPERTY POSITION_INDEPENDENT_CODE TRUE)

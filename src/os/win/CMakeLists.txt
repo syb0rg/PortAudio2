@@ -9,3 +9,4 @@ SET(SOURCES	pa_win_coinitialize.c
 	)
 	
 add_library(win OBJECT ${SOURCES})
+set_property(TARGET win PROPERTY POSITION_INDEPENDENT_CODE TRUE)

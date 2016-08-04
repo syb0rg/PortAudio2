@@ -5,3 +5,4 @@ SET(SOURCES	pa_win_ds.c
 	)
 	
 add_library(dsound OBJECT ${SOURCES})
+set_property(TARGET dsound PROPERTY POSITION_INDEPENDENT_CODE TRUE)

@@ -6,3 +6,4 @@ SET(SOURCES	pa_unix_oss.c
 	)
 	
 add_library(oss OBJECT ${SOURCES})
+set_property(TARGET oss PROPERTY POSITION_INDEPENDENT_CODE TRUE)

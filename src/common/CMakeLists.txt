@@ -11,3 +11,4 @@ SET(SOURCES	pa_allocation.c
 	)
 	
 add_library(common OBJECT ${SOURCES})
+set_property(TARGET common PROPERTY POSITION_INDEPENDENT_CODE TRUE)

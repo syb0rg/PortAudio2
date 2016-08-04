@@ -54,8 +54,6 @@ else ()
         add_definitions(-DHAVE_SYS_SOUNDCARD_H)
 		add_subdirectory(oss)
         set(OBJECTS ${OBJECTS}  "$<TARGET_OBJECTS:oss>")
-
-#set set(LIBS ${LIBS} )
 	endif()
 
 	if(APPLE)
