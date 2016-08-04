@@ -16,13 +16,13 @@ if (WIN32)
 	endif ()
 
 	add_subdirectory(wasapi)
-	add_subdirectory(wdmks)
-	add_subdirectory(wmme)
+	#add_subdirectory(wdmks)
+	#add_subdirectory(wmme)
 
     SET(OBJECTS ${OBJECTS}
                 "$<TARGET_OBJECTS:wasapi>"
-                "$<TARGET_OBJECTS:wdmks>"
-                "$<TARGET_OBJECTS:wmme>"
+                #"$<TARGET_OBJECTS:wdmks>"
+                #"$<TARGET_OBJECTS:wmme>"
     )
 
     add_library(${PROJECT_NAME} SHARED ${OBJECTS})

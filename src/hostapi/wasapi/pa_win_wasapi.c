@@ -49,7 +49,7 @@
 #include <assert.h>
 #include <mmsystem.h>
 #include <mmreg.h>  // must be before other Wasapi headers
-#if defined(_MSC_VER) && (_MSC_VER >= 1400)
+#if defined(_WIN32)
 	#include <Avrt.h>
 	#define COBJMACROS
 	#include <Audioclient.h>
