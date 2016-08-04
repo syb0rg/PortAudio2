@@ -73,4 +73,5 @@ else ()
     add_library(${PROJECT_NAME}_static STATIC ${OBJECTS})
 
     target_link_libraries(${PROJECT_NAME} ${LIBS} pthread m)
+	target_link_libraries(${PROJECT_NAME}_static ${LIBS} pthread m)
 endif ()
