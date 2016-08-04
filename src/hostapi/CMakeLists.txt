@@ -51,6 +51,7 @@ else ()
 
     find_package(OSS)
 	if(OSS_FOUND)
+        add_definitions(-DHAVE_SYS_SOUNDCARD_H)
 		add_subdirectory(oss)
         set(OBJECTS ${OBJECTS}  "$<TARGET_OBJECTS:oss>")
 
