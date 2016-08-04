@@ -50,6 +50,8 @@
 #ifdef _WIN32
 #include <windows.h>
 #include <process.h>
+#else 
+#define min(a, b)  (((a) < (b)) ? (a) : (b))
 #endif
 
 /* #define SAMPLE_RATE  (17932) // Test failure to open with this value. */

@@ -8,7 +8,7 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 set(CMAKE_MACOSX_RPATH TRUE)
 
-#SET_PROPERTY(GLOBAL PROPERTY USE_FOLDERS ON)
-
 include_directories(include)
+
 add_subdirectory(src)
+add_subdirectory(examples)

@@ -1,35 +1,31 @@
-# Example projects
+include_directories(${CMAKE_SOURCE_DIR}/src/common/)
 
-MACRO(ADD_EXAMPLE appl_name)
-   ADD_EXECUTABLE(${appl_name} "${appl_name}.c")
-   TARGET_LINK_LIBRARIES(${appl_name} portaudio_static)
-   SET_TARGET_PROPERTIES(${appl_name}
-      PROPERTIES
-      FOLDER "Examples C"
-   )
-ENDMACRO(ADD_EXAMPLE)
+set(PROGRAMS	pa_devs
+                pa_fuzz
+                paex_mono_asio_channel_select
+                paex_ocean_shore
+                paex_pink
+                paex_read_write_wire
+                paex_record
+                paex_record_file
+                paex_saw
+                paex_sine
+                paex_sine_c++
+                paex_write_sine
+                paex_write_sine_nonint
+)
 
-MACRO(ADD_EXAMPLE_CPP appl_name)
-   ADD_EXECUTABLE(${appl_name} "${appl_name}.cpp")
-   TARGET_LINK_LIBRARIES(${appl_name} portaudio_static)
-   SET_TARGET_PROPERTIES(${appl_name}
-      PROPERTIES
-      FOLDER "Examples C++"
-   )
-ENDMACRO(ADD_EXAMPLE_CPP)
+if (WIN32)
+	set(PROGRAMS ${PROGRAMS}	paex_wmme_ac3
+					paex_wmme_surround
+	)
+endif ()
 
-ADD_EXAMPLE(pa_devs)
-ADD_EXAMPLE(pa_fuzz)
-ADD_EXAMPLE(paex_mono_asio_channel_select)
-ADD_EXAMPLE(paex_ocean_shore)
-ADD_EXAMPLE(paex_pink)
-ADD_EXAMPLE(paex_read_write_wire)
-ADD_EXAMPLE(paex_record)
-ADD_EXAMPLE(paex_record_file)
-ADD_EXAMPLE(paex_saw)
-ADD_EXAMPLE(paex_sine)
-ADD_EXAMPLE_CPP(paex_sine_c++)
-ADD_EXAMPLE(paex_wmme_ac3)
-ADD_EXAMPLE(paex_wmme_surround)
-ADD_EXAMPLE(paex_write_sine)
-ADD_EXAMPLE(paex_write_sine_nonint)
+foreach (program ${PROGRAMS})
+	add_executable(${program} ${program})
+	target_link_libraries(${program} ${PROJECT_NAME}_static)
+	set_target_properties (${program} 	
+				PROPERTIES
+				RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}
+				)
+endforeach ()
