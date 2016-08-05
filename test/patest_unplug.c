@@ -43,6 +43,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 #include <memory.h>
 #include <math.h>
 #include "portaudio.h"
