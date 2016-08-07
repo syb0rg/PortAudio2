@@ -240,8 +240,6 @@ int main(void)
 done:
     Pa_Terminate();
     printf("Full duplex sound test complete.\n"); fflush(stdout);
-    printf("Hit ENTER to quit.\n");  fflush(stdout);
-    getchar();
     return 0;
 
 error:
@@ -249,8 +247,6 @@ error:
     fprintf( stderr, "An error occured while using the portaudio stream\n" );
     fprintf( stderr, "Error number: %d\n", err );
     fprintf( stderr, "Error message: %s\n", Pa_GetErrorText( err ) );
-    printf("Hit ENTER to quit.\n");  fflush(stdout);
-    getchar();
     return -1;
 }
 
@@ -307,9 +303,6 @@ static PaError TestConfiguration( WireConfig_t *config )
     
     err = Pa_StartStream( stream );
     if( err != paNoError ) goto error;
-    
-    printf("Now recording and playing. - Hit ENTER for next configuration, or 'q' to quit.\n");  fflush(stdout);
-    c = getchar();
     
     printf("Closing stream.\n");
     err = Pa_CloseStream( stream );

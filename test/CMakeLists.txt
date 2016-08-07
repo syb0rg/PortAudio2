@@ -7,12 +7,8 @@ set(TESTS	pa_minlat
 			patest_clip
 			patest_converters
 			patest_dither
-			patest_dsound_find_best_latency_params
-			patest_dsound_low_level_latency_params
-			patest_dsound_surround
 			patest_hang
 			patest_in_overflow
-			patest_jack_wasapi
 			patest_latency
 			patest_leftright
 			patest_longsine
@@ -40,10 +36,18 @@ set(TESTS	pa_minlat
 			patest_underflow
 			patest_unplug
 			patest_wire
-			patest_wmme_find_best_latency_params
-			patest_wmme_low_level_latency_params
 			patest_write_stop
 )
+
+if (WIN32)
+    set(TESTS ${TESTS} 	patest_dsound_find_best_latency_params
+                        patest_dsound_low_level_latency_params
+                        patest_dsound_surround
+                        patest_wmme_find_best_latency_params
+                        patest_wmme_low_level_latency_params
+                        patest_jack_wasapi
+    )
+endif ()
 
 enable_testing()
 add_custom_target(check COMMAND ${CMAKE_CTEST_COMMAND} DEPENDS ${TESTS})
