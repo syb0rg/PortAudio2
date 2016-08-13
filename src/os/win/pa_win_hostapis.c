@@ -72,27 +72,27 @@ PaError PaWasapi_Initialize( PaUtilHostApiRepresentation **hostApi, PaHostApiInd
 PaUtilHostApiInitializer *paHostApiInitializers[] =
     {
 
-#if PA_USE_WMME
+#ifdef PA_USE_WMME
         PaWinMme_Initialize,
 #endif
 
-#if PA_USE_DS
+#ifdef PA_USE_DS
         PaWinDs_Initialize,
 #endif
 
-#if PA_USE_ASIO
+#ifdef PA_USE_ASIO
         PaAsio_Initialize,
 #endif
 
-#if PA_USE_WASAPI
+#ifdef PA_USE_WASAPI
 		PaWasapi_Initialize,
 #endif
 
-#if PA_USE_WDMKS
+#ifdef PA_USE_WDMKS
         PaWinWdm_Initialize,
 #endif
 
-#if PA_USE_SKELETON
+#ifdef PA_USE_SKELETON
         PaSkeleton_Initialize, /* just for testing. last in list so it isn't marked as default. */
 #endif
 

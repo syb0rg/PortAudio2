@@ -24,7 +24,10 @@
 
 # Doxygen
 html/
-latex/
+latex
+
+# Generated files
+src/common/pa_hostapi.h
 
 # Mac stuff
 .DS_Store
