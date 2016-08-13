@@ -157,10 +157,6 @@ int main(int argc, char* argv[])
 
     err = Pa_StartStream( stream );
     if( err != paNoError ) goto done;
-    
-    printf( "Press any key to end.\n" ); fflush(stdout);
-         
-    getc( stdin ); /* wait for input before exiting */
 
     err = Pa_AbortStream( stream );
     if( err != paNoError ) goto done;

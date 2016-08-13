@@ -163,8 +163,6 @@ int test(short interleaved)
         err = Pa_StartStream(stream);
         if (err == paNoError)
             {
-            printf("Hit ENTER to stop this test.\n");
-            getchar();
             err = Pa_StopStream(stream);
             }
         Pa_CloseStream( stream );

@@ -132,9 +132,6 @@ int main(void)
     err = Pa_StartStream( stream );
     if( err != paNoError ) goto error;
 
-    printf("Hit ENTER to stop program.\n");
-    getchar();
-
     err = Pa_CloseStream( stream );
     if( err != paNoError ) goto error;
     Pa_Terminate();

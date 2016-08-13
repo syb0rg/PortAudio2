@@ -1,6 +1,7 @@
 include_directories(${CMAKE_SOURCE_DIR}/src/common)
 
-set(TESTS	pa_minlat
+set(TESTS
+#pa_minlat
 			patest1
 			patest_buffer
 			patest_callbackstop
@@ -9,7 +10,7 @@ set(TESTS	pa_minlat
 			patest_dither
 			patest_hang
 			patest_in_overflow
-			patest_latency
+#patest_latency
 			patest_leftright
 			patest_longsine
 			patest_many
@@ -34,7 +35,7 @@ set(TESTS	pa_minlat
 			patest_toomanysines
 			patest_two_rates
 			patest_underflow
-			patest_unplug
+#patest_unplug
 			patest_wire
 			patest_write_stop
 )
