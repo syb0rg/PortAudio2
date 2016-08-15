@@ -17,6 +17,7 @@ if (WIN32)
 		set(OBJECTS ${OBJECTS} "$<TARGET_OBJECTS:dsound>")
 	endif ()
 
+	set(PA_USE_WASAPI TRUE)
 	add_subdirectory(wasapi)
 	#add_subdirectory(wdmks)
 	#add_subdirectory(wmme)
