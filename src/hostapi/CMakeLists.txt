@@ -60,12 +60,13 @@ if (OSS_FOUND)
 endif()
 
 find_package(CoreAudio)
-if (COREAUDIO_FOUND)
+find_package(AudioToolbox)
+if (COREAUDIO_FOUND AND AUDIOTOOLBOX_FOUND)
 	set(PA_USE_COREAUDIO TRUE)
 	add_subdirectory(coreaudio)
 	SET(OBJECTS ${OBJECTS}  "$<TARGET_OBJECTS:coreaudio>")
 	
-	set(LIBS ${LIBS} ${COREAUDIO_LIBRARY})
+	set(LIBS ${LIBS} ${COREAUDIO_LIBRARY} ${AUDIOTOOLBOX_LIBRARY})
 endif()
 
 #
