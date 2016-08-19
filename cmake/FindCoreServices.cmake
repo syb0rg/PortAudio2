@@ -1,6 +1,7 @@
-# CORESERVICES_FOUND
-# CORESERVICES_INCLUDE_DIR
+# Locate Apple CoreServices
 # CORESERVICES_LIBRARY
+# CORESERVICES_FOUND, if false, do not try to link 
+# CORESERVICES_INCLUDE_DIR, where to find the headers
 
 find_path(CORESERVICES_INCLUDE_DIR NAMES CoreServices/CoreServices.h)
 

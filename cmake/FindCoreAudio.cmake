@@ -1,6 +1,8 @@
-# COREAUDIO_FOUND
-# COREAUDIO_INCLUDE_DIR
+# Locate Apple CoreAudio
 # COREAUDIO_LIBRARY
+# COREAUDIO_FOUND, if false, do not try to link 
+# COREAUDIO_INCLUDE_DIR, where to find the headers
+
 
 find_path(COREAUDIO_INCLUDE_DIR NAMES CoreAudio/CoreAudio.h)
 

@@ -1,6 +1,7 @@
-# AUDIOUNIT_FOUND
-# AUDIOUNIT_INCLUDE_DIR
+# Locate Apple AudioUnit
 # AUDIOUNIT_LIBRARY
+# AUDIOUNIT_FOUND, if false, do not try to link 
+# AUDIOUNIT_INCLUDE_DIR, where to find the headers
 
 find_path(AUDIOUNIT_INCLUDE_DIR NAMES AudioUnit/AudioUnit.h)
 

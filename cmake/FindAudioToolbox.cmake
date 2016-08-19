@@ -1,6 +1,7 @@
-# AUDIOTOOLBOX_FOUND
-# AUDIOTOOLBOX_INCLUDE_DIR
+# Locate Apple AudioToolbox
 # AUDIOTOOLBOX_LIBRARY
+# AUDIOTOOLBOX_FOUND, if false, do not try to link 
+# AUDIOTOOLBOX_INCLUDE_DIR, where to find the headers
 
 find_path(AUDIOTOOLBOX_INCLUDE_DIR NAMES AudioToolbox/AudioToolbox.h)
 

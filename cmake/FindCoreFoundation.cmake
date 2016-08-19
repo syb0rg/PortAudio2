@@ -1,6 +1,6 @@
 # Locate Apple CoreFoundation
 # COREFOUNDATION_LIBRARY
-# COREFOUNDATION_FOUND, if false, do not try to link to gdal 
+# COREFOUNDATION_FOUND, if false, do not try to link
 # COREFOUNDATION_INCLUDE_DIR, where to find the headers
 
 find_path(COREFOUNDATION_INCLUDE_DIR CoreFoundation/CoreFoundation.h)
