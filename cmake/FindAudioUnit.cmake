@@ -1,0 +1,12 @@
+# AUDIOUNIT_FOUND
+# AUDIOUNIT_INCLUDE_DIR
+# AUDIOUNIT_LIBRARY
+
+find_path(AUDIOUNIT_INCLUDE_DIR NAMES AudioUnit/AudioUnit.h)
+
+find_library(AUDIOUNIT_LIBRARY NAMES AudioUnit)
+
+include(FindPackageHandleStandardArgs)
+find_package_handle_standard_args(AUDIOUNIT DEFAULT_MSG AUDIOUNIT_LIBRARY AUDIOUNIT_INCLUDE_DIR)
+
+mark_as_advanced(AUDIOUNIT_INCLUDE_DIR AUDIOUNIT_LIBRARY)

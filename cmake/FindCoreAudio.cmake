@@ -1,7 +1,3 @@
-# Copyright (c) 2015 Andrew Kelley
-# This file is MIT licensed.
-# See http://opensource.org/licenses/MIT
-
 # COREAUDIO_FOUND
 # COREAUDIO_INCLUDE_DIR
 # COREAUDIO_LIBRARY
