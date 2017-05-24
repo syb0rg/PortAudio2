@@ -1,4 +1,5 @@
 include_directories(${CMAKE_SOURCE_DIR}/src/common)
+include_directories(${CMAKE_SOURCE_DIR}/src/os/unix)
 
 SET(SOURCES pa_linux_alsa.c)
 

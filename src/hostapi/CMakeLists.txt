@@ -37,11 +37,12 @@ find_package(ALSA)
 if (ALSA_FOUND)
 	set(PA_USE_ALSA TRUE)
 	add_subdirectory(alsa)
-	add_subdirectory(asihpi)
+	#add_subdirectory(asihpi)
 
 	set(OBJECTS ${OBJECTS}  "$<TARGET_OBJECTS:alsa>"
-							"$<TARGET_OBJECTS:asihpi>"
+	#			"$<TARGET_OBJECTS:asihpi>"
 	)
+	set(LIBS ${LIBS} ${ALSA_LIBRARY})
 endif ()
 
 find_package(Jack)
